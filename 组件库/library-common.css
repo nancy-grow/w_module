@@ -1,0 +1,219 @@
+/*组件库公共样式
+*/
+/*样式初始化，公共样式*/
+li {
+    list-style: none;
+}
+a:hover{text-decoration: none;}
+div, p, h1, h2, h3, h4, h5, h6, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+/*通用样式，加间距，加边距，加边框*/
+.lib-martop-add10{
+    margin-top: 10px;
+}
+.lib-info-say{
+    margin: 5px 0;
+}
+.lib-info-say>.name{
+    font-size: 14px;
+    font-weight: 800;
+    color: #fa7d00;
+}
+/*通用样式，加间距，加边距，加边框*/
+
+.source { /*项目起始类*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.lib-header {
+    position: relative;
+    width: 100%;
+    height: 54px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+}
+
+.lib-head-logo {
+    float: left;
+    width: 150px;
+    height: 100%;
+    background: #4E96F7;
+}
+
+.lib-wrap {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #eceef3;
+}
+
+.lib-left-menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    color: #E1E8EF;
+    font-weight: normal;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, .2);
+    border-bottom-right-radius: 4px;
+    background: #1e2535;
+}
+
+.lib-left-menu::-webkit-scrollbar-track { /*加黑滚动条背景板*/
+    background: #343d50;
+}
+
+.lib-left-menu p {
+    position: relative;
+    padding: 8px 0 8px 15px;
+    max-width: 100%;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: default;
+    background: #343d50;
+    border-left: 5px solid #343d50;
+    border-bottom: 1px solid #1e2535;
+}
+.lib-left-menu p>a{
+    color: #E1E8EF;
+}
+/*箭头样式 start*/
+.lib-parent-menu:after {
+    transition: all .2s ease-in-out;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -4px;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    transform: rotate(45deg);
+    transform-origin: 50%;
+}
+
+/*箭头样式 end*/
+.lib-parent-menu.open:after {
+    transform: rotate(135deg);
+}
+
+.lib-left-menu > ul > li > ul {
+    display: none;
+}
+
+.lib-child-menu {
+    padding: 8px 0 8px 35px !important;
+    font-size: 12px !important;
+}
+
+.lib-left-menu p:hover {
+    border-left: 5px solid #4E96F7;
+    background: #414c63;
+    color: white;
+}
+
+.lib-left-menu p.active {
+    border-left: 5px solid #4E96F7;
+    background: #414c63;
+    color: white;
+}
+
+.lib-main-body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 150px;
+    width: calc(100% - 150px);
+    color: #666;
+    font-weight: normal;
+}
+
+.lib-compoent-list {
+    width: 100%;
+    padding: 15px 0 15px 20px;
+}
+
+.lib-compoent {
+    width: 100%;
+}
+
+.lib-compnent-info {
+    width: 100%;
+}
+
+.lib-compnent-info p {
+    padding: 5px 0;
+}
+
+.lib-compnent-info li {
+    padding-left: 10px;
+    font-size: 12px
+}
+
+.lib-compnent-main {
+    position: relative;
+    width: 100%;
+    padding: 15px 0 10px 0;
+}
+
+.lib-compnent-group {
+    float: left;
+    width: 44.9%;
+    min-height: 200px;
+    border-right: 1px dashed #999;
+}
+
+.lib-compnent-use {
+    float: left;
+    width: 55%;
+    padding-left: 10px;
+}
+
+.lib-compnent-group > p, .lib-compnent-use > p {
+    font-weight: 800;
+}
+
+.lib-sayto-use {
+    position: absolute;
+    top: 35px;
+    bottom: 0;
+    width: 50%;
+}
+.lib-sayto-use > pre {
+    width: 100%;
+}
+.lib-compnent-show {
+    position: relative;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.lib-btn-group {
+    display: -webkit-flex;
+    display: flex;
+    padding: 5px 5px;
+}
+
+.lib-btn-addmar {
+    margin: 0 10px;
+}

@@ -1,0 +1,149 @@
+/* 组件样式
+    2017/12/08 by wangjubao xinba
+*/
+
+/*元素默认样式删除 start*/
+body {
+    font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, STHeitiSC-Light, WOL_SB, 'Segoe UI Semibold', 'Segoe UI', Tahoma, Helvetica, sans-serif;
+    margin: 0;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none
+}
+
+button:hover {
+    border: none
+}
+
+/*元素默认样式删除 end*/
+
+/*箭头样式 start
+* 使用样例：将该类名加入需要显示箭头的元素上，！！该元素需要定位，relative
+*/
+.w-right-arrow:after {
+    transition: all .2s ease-in-out;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -4px;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    transform: rotate(45deg);
+    transform-origin: 50%;
+}
+
+/*箭头样式 end*/
+
+/*滚动条样式 start  注：该样式未兼容 IE 浏览器
+* 使用特点：将类名添加至需要滚动的元素上，该元素需要有最大或固定高
+*/
+.w-scroll-defult { /*默认滚动条*/
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.w-scroll-defult::-webkit-scrollbar-track { /*滚动条背景板*/
+    background: #ffffff;
+}
+
+.w-scroll-defult::-webkit-scrollbar {
+    width: 6px;
+    background-color: #d8d8d8;
+    border-radius: 15px;
+}
+
+.w-scroll-defult::-webkit-scrollbar-thumb { /*滚动条*/
+    background-color: #d8d8d8;
+    -webkit-box-shadow: inset 0 0 6px rgb(216, 216, 216);
+    border-radius: 15px;
+}
+
+/*滚动条样式 end */
+
+/*按钮样式组 start*/
+.w-btn {
+    display: inline-block;
+    min-width: 90px;
+    padding: 8px 17px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    letter-spacing: 0;
+}
+.w-btn:hover {
+    opacity: .8;
+}
+.w-btn[disabled]{
+    opacity: .4;
+    cursor: not-allowed;
+}
+.w-btn.w-sea:before{
+    content: " ";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    background: url("/apps/lib-img/dongcha.ico");
+}
+.w-btn.w-btn-load:before{
+    content: " ";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    background: url("/apps/lib-img/dongcha.ico");
+}
+.w-btn.w-btn-load{
+    opacity:.4;
+}
+.w-btn-main { /*主要按钮*/
+    background-color: #2783f2;
+}
+
+.w-btn-main.w-btn-dec, .w-btn-main.w-btn-write { /*次要按钮,文字按钮*/
+    color: #2783f2;
+}
+
+.w-btn-success { /*主要成功按钮*/
+    background-color: #50c368;
+}
+
+.w-btn-success.w-btn-dec, .w-btn-success.w-btn-write { /*次要成功按钮，文字成功按钮*/
+    color: #50c368;
+}
+
+.w-btn-warn { /*主要警告按钮*/
+    background-color: #fa7d00;
+}
+
+.w-btn-warn.w-btn-dec, .w-btn-warn.w-btn-write { /*次要警告按钮,文字警告按钮*/
+    color: #fa7d00;
+}
+
+.w-btn-danger { /*主要危险按钮*/
+    background-color: #fa5555;
+}
+
+.w-btn-danger.w-btn-dec, .w-btn-danger.w-btn-write { /*次要危险按钮,文字危险按钮*/
+    color: #fa5555;
+}
+
+.w-btn-dec { /*次要按钮*/
+    background-color: #fbfcfc;
+}
+
+.w-btn-write { /*文字按钮*/
+    background: none;
+}
+
+/*按钮样式组 end*/
+

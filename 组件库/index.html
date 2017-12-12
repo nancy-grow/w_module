@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="简洁、直观、强悍、简单。">
+    <title>组件集成库</title>
+    <link rel="shortcut icon" href="/src/images/dongcha.ico">
+    <!-- build:css -->
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="compon-library.css">
+    <link rel="stylesheet" href="library-common.css">
+    <!-- endbuild -->
+    <!-- build:js -->
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <script src="compon-library.js"></script>
+    <!-- endbuild -->
+</head>
+<body class="source">
+<div class="lib-header">
+    <div class="lib-head-logo">
+
+    </div>
+</div>
+<div class="lib-wrap">
+    <div class="lib-left-menu w-scroll-defult">
+        <ul>
+            <li><p><a href="#info">入门</a></p></li>
+            <li><p class="lib-parent-menu"><a href="#btngroup">按钮组</a></p>
+                <ul>
+                    <li><p class="lib-child-menu"><a href="#combtn">常用按钮</a></p></li>
+                    <li><p class="lib-child-menu"><a href="#iconbtn">带图标按钮</a></p></li>
+                    <li><p class="lib-child-menu">加载按钮</p></li>
+                    <li><p class="lib-child-menu">不同尺寸按钮</p></li>
+                </ul>
+            </li>
+            <li><p class="lib-parent-menu">输入框</p>
+                <ul>
+                    <li><p class="lib-child-menu">基本输入框</p></li>
+                    <li><p class="lib-child-menu">带图标输入框</p></li>
+                    <li><p class="lib-child-menu">计数器输入框</p></li>
+                    <li><p class="lib-child-menu">不同尺寸输入框</p></li>
+                </ul>
+            </li>
+            <li><p>下拉菜单</p></li>
+            <li><p class="lib-parent-menu">选择器</p>
+                <ul>
+                    <li><p class="lib-child-menu">基本选择器</p></li>
+                    <li><p class="lib-child-menu">多层级选择器</p></li>
+                </ul>
+            </li>
+            <li><p>Popover弹出框</p></li>
+            <li><p>商品缩略图</p></li>
+            <li><p class="lib-parent-menu">选择按钮</p>
+                <ul>
+                    <li><p class="lib-child-menu">单选按钮</p></li>
+                    <li><p class="lib-child-menu">多选按钮</p></li>
+                </ul>
+            </li>
+            <li><p>消息反馈</p></li>
+            <li><p>分页</p></li>
+        </ul>
+    </div>
+    <div class="lib-main-body w-scroll-defult">
+        <div class="lib-compoent-list">
+            <div class="lib-compoent" id="info">
+                <div class="lib-compnent-info">
+                    <h3>入门手册</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;网聚宝组件库根据各部门统一要求与规范，将能够通用的组件集中归类到组件库当中。虽然组件库的样式和交互仅依赖jquery框架，
+                        但是提醒大家还是需要把bootstrap框架引入到项目当中去，这是为了方便大家使用网上流传较广泛的一些第三方插件。</p>
+                    <h4>1.使用步骤</h4>
+                    <ul>
+                        <li><pre>&lt;link href="/css/compon-library.css"&gt; &nbsp;//引入组件库样式表</pre></li>
+                        <li><pre>&lt;link href="/jquery/dist/jquery.js"&gt; &nbsp;//引入jquery框架</pre></li>
+                        <li><pre>&lt;link href="/js/common/compon-library.js"&gt; &nbsp;//引入组件库js包</pre></li>
+                        <li><pre>组件库的图片和icon地址全部在项目的"/apps/lib-img/**"目录下面，请大家复制好储存位置。</pre></li>
+                    </ul>
+                    <h4>2.使用方式</h4>
+                    <ul>
+                        <li><pre>例：&lt;button class="w-btn w-btn-main"&gt;主要&lt;/button&gt; &nbsp;//网聚宝组件库的所有样式由类名控制。</pre></li>
+                        <li><pre>所有的类名都是以"w"做开头，以"-"做间隔符。也就是说凡不是以"w"做开头的类名都不属于网聚宝组件库的样式，大家在使用的时候一定要注意。</pre></pre></li>
+                        <li><pre>组件库根据组件类别，将不同类型的组件整理归纳。每个组件都是单独且可以直接拷贝拿走使用。但是也请大家仔细参考组件右边的使用方案之后再酌情使用。</pre></li>
+                    </ul>
+                    <p style="margin-bottom: 200px"></p>
+                </div>
+                </div>
+            <div class="lib-compoent" id="btngroup">
+                <div class="lib-compnent-info">
+                    <p>使用规则</p>
+                    <p>标准按钮分为主要和次要，一个模块中(如浮层、表格、表单、页面等)只能有一个主要按钮, 主引导用户的操作，其他的按钮皆为次要操作。</p>
+                    <ul>
+                        <li>• Button与文字、图标等Button组合使用时，垂直居中对齐。</li>
+                        <li>• 主要按钮跟次要按钮组合时，主要按钮需放在次要按钮左边（按钮之间水平间距为10px）。</li>
+                        <li>• 按钮上的文字应保持简洁，使用清楚明了的触发文字，例如：注册、下一步、下载 。</li>
+                    </ul>
+                </div>
+                <div class="lib-compnent-main clearfix">
+                    <div class="lib-compnent-group">
+                        <p id="combtn">常用按钮</p>
+                        <div class="lib-compnent-show">
+                            <div class="lib-btn-group">
+                                <button class="w-btn w-btn-main lib-btn-addmar">主要</button>
+                                <button class="w-btn w-btn-success lib-btn-addmar">成功</button>
+                                <button class="w-btn w-btn-warn lib-btn-addmar">警告</button>
+                                <button class="w-btn w-btn-danger lib-btn-addmar">危险</button>
+                            </div>
+                            <div class="lib-btn-group">
+                                <button class="w-btn w-btn-dec w-btn-main lib-btn-addmar">次要</button><!--decline-->
+                                <button class="w-btn w-btn-dec w-btn-success lib-btn-addmar">成功</button>
+                                <button class="w-btn w-btn-dec w-btn-warn lib-btn-addmar">警告</button>
+                                <button class="w-btn w-btn-dec w-btn-danger lib-btn-addmar">危险</button>
+                            </div>
+                            <div class="lib-btn-group">
+                                <button class="w-btn w-btn-write w-btn-main lib-btn-addmar">文字按钮</button>
+                                <button class="w-btn w-btn-write w-btn-success lib-btn-addmar">成功</button>
+                                <button class="w-btn w-btn-write w-btn-warn lib-btn-addmar">警告</button>
+                                <button class="w-btn w-btn-write w-btn-danger lib-btn-addmar">危险</button>
+                            </div>
+                            <div class="lib-btn-group">
+                                <button class="w-btn w-btn-main lib-btn-addmar" disabled>主要</button>
+                                <button class="w-btn w-btn-success lib-btn-addmar" disabled>成功</button>
+                                <button class="w-btn w-btn-warn lib-btn-addmar" disabled>警告</button>
+                                <button class="w-btn w-btn-danger lib-btn-addmar" disabled>危险</button>
+                            </div>
+                            <div class="lib-btn-group">
+                                <button class="w-btn w-btn-dec w-btn-main lib-btn-addmar" disabled>次要</button>
+                                <button class="w-btn w-btn-dec w-btn-success lib-btn-addmar" disabled>成功</button>
+                                <button class="w-btn w-btn-dec w-btn-warn lib-btn-addmar" disabled>警告</button>
+                                <button class="w-btn w-btn-dec w-btn-danger lib-btn-addmar" disabled>危险</button>
+                            </div>
+                            <div class="lib-btn-group">
+                                <button class="w-btn w-btn-write w-btn-main lib-btn-addmar" disabled>文字按钮</button>
+                                <button class="w-btn w-btn-write w-btn-success lib-btn-addmar" disabled>成功</button>
+                                <button class="w-btn w-btn-write w-btn-warn lib-btn-addmar" disabled>警告</button>
+                                <button class="w-btn w-btn-write w-btn-danger lib-btn-addmar" disabled>危险</button>
+                            </div>
+
+                        </div>
+                        <p id="iconbtn">图标按钮</p>
+                        <div class="lib-compnent-show">
+                            <div class="lib-btn-group">
+                                <button class="w-btn w-btn-main lib-btn-addmar w-sea">主要</button>
+                                <button class="w-btn w-btn-success lib-btn-addmar w-sea">成功</button>
+                                <button class="w-btn w-btn-warn lib-btn-addmar w-sea">警告</button>
+                                <button class="w-btn w-btn-danger lib-btn-addmar w-sea">危险</button>
+                            </div>
+                        </div>
+                        <p >加载按钮</p>
+                        <div class="lib-compnent-show">
+                            <div class="lib-btn-group">
+                                <button class="w-btn w-btn-main lib-btn-addmar w-btn-load">加载中</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lib-compnent-use">
+                        <p>使用方案</p>
+                        <div class="lib-sayto-use w-scroll-defult">
+                            <h4 class="lib-martop-add10">1.组件特性</h4>
+                            <ul>
+                                <li>&nbsp;&nbsp;• display:inline-block;行内块元素。</li>
+                                <li>&nbsp;&nbsp;• 无外边距无边框。</li>
+                                <li>&nbsp;&nbsp;• 可浮动，可定位。</li>
+                            </ul>
+                            <h4>2.例子</h4>
+                            <pre>&lt;button class="w-btn w-btn-main w-btn-write" disabled &gt;文字按钮&lt;/button&gt;//带有禁用的文字按钮</pre>
+                            <h4>3.文档</h4>
+                            <p class="lib-info-say"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">w-btn</span> :
+                                按钮组件的默认类名，使用按钮必须先加上该类名。class="w-btn"</p>
+                            <p class="lib-info-say"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">w-btn-main，w-btn-success，w-btn-warn，w-btn-danger</span>:
+                                按钮组件基本类：主要按钮，成功按钮，警告按钮，危险按钮。class="w-btn w-btn-main"</p>
+                            <p class="lib-info-say"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">w-btn-dec</span>:
+                                次要按钮类，四个不同类别的按钮，加上该类，会变成次要按钮。class="w-btn w-btn-main w-btn-dec"</p>
+                            <p class="lib-info-say"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">w-btn-write</span>:
+                                文字按钮类，四个不同类别的按钮，加上该类，会变成文字按钮。class="w-btn w-btn-main w-btn-write"</p>
+                            <p class="lib-info-say"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">w-sea</span>:
+                                搜索图标按钮类，四个不同类别的按钮，加上该类，会给图标加上搜索按钮。class="w-btn w-btn-main w-sea"</p>
+                            <p class="lib-info-say"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">[disabled]</span>:
+                                按钮的禁用属性。所有的按钮，加上该属性会进入禁用状态。 disabled="disabled"</p>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="lib-compnent-main clearfix" >
+                    <div class="lib-compnent-group">&lt;!&ndash;<p><pre> &lt;p&gt;</pre></p>&ndash;&gt;
+                        <p>图标按钮</p>
+                        <div class="lib-compnent-show">
+                            <div class="lib-btn-group">
+                                <button class="w-btn w-btn-main lib-btn-addmar"><span class="sea"></span> 主要</button>
+                                <button class="w-btn w-btn-success lib-btn-addmar">成功</button>
+                                <button class="w-btn w-btn-warn lib-btn-addmar">警告</button>
+                                <button class="w-btn w-btn-danger lib-btn-addmar">危险</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lib-compnent-use">
+                        <p>使用方案</p>
+                        <div class="lib-sayto-use w-scroll-defult">
+                            <h4 class="lib-martop-add10">1.组件特性</h4>
+                            <ul>
+                                <li>&nbsp;&nbsp;• display:inline-block;行内块元素。</li>
+                                <li>&nbsp;&nbsp;• 无外边距无边框。</li>
+                                <li>&nbsp;&nbsp;• 可浮动，可定位。</li>
+                            </ul>
+                            <h4>2.例子</h4>
+                            <pre>&lt;button class="w-btn w-btn-main w-btn-write" disabled &gt;文字按钮&lt;/button&gt;//带有禁用的文字按钮</pre>
+                            <h4>3.文档</h4>
+                            <p class="lib-info-say"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">w-btn</span> :
+                                按钮组件的默认类名，使用按钮必须先加上该类名。class="w-btn"</p>
+                            <p class="lib-info-say"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">w-btn-main，w-btn-success，w-btn-warn，w-btn-danger</span>:
+                                按钮组件基本类：主要按钮，成功按钮，警告按钮，危险按钮。class="w-btn w-btn-main"</p>
+                            <p class="lib-info-say"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">w-btn-dec</span>:
+                                次要按钮类，四个不同类别的按钮，加上该类，会变成次要按钮。class="w-btn w-btn-main w-btn-dec"</p>
+                            <p class="lib-info-say"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">w-btn-write</span>:
+                                文字按钮类，四个不同类别的按钮，加上该类，会变成文字按钮。class="w-btn w-btn-main w-btn-write"</p>
+                            <p class="lib-info-say"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">[disabled]</span>:
+                                按钮的禁用属性。所有的按钮，加上该属性会进入禁用状态。 disabled="disabled"</p>
+                        </div>
+                    </div>
+                </div>-->
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function ($) {
+        $(".lib-parent-menu").on("click", function (e) {
+            if (e.target.className.indexOf("open") >= 0) {
+                $(this).removeClass("open")
+            } else {
+                $(this).addClass("open")
+            }
+            $(this).next().toggle(200);
+        })
+        $(".lib-left-menu p").on("click", function (e) {
+            for (var i = 0; i < $(".lib-left-menu p").length; i++) {
+                if ($(".lib-left-menu p")[i].className.indexOf("active") >= 0) {
+                    $(".lib-left-menu p:eq(" + i + ")").removeClass("active")
+                }
+            }
+            if (e.target.className.indexOf("active") >= 0) {
+                $(this).removeClass("active")
+            } else {
+                $(this).addClass("active")
+            }
+        })
+    })
+</script>
+</body>
+</html>
